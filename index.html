@@ -1,0 +1,35 @@
+<html>
+ <head>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>  
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.0.0-alpha.15/js/onsenui.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.0.0-alpha.15/js/angular-onsenui.min.js"></script>   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.0.0-alpha.15/css/onsenui.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.0.0-alpha.15/css/onsen-css-components.min.css" />
+   <script>
+       var app = ons.bootstrap();
+       
+       app.controller('page1',function($scope){
+
+       });
+       
+   </script>
+ </head>
+ <body>
+  <ons-navigator title="Navigator" var="myNavigator">
+        <ons-button modifier="light" onclick="myNavigator.pushPage('page1.html', { animation : 'slide' } )">
+          Push Page
+        </ons-button>
+  </ons-navigator>
+  
+  
+  <ons-template id="page1.html">
+    <ons-page ng-controller="page1">
+      <ons-toolbar>
+        <div class="center">Page 1</div>
+      </ons-toolbar>
+
+    </ons-page>
+  </ons-template>
+
+ </body>
+</html>
