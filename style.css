@@ -1,23 +1,32 @@
-/* Styles go here */
-ons-carousel-item {
-  display: table;
-  text-align: center;
+.list-item {
+  padding: 0;
+  height: 72px;
 }
 
-.item-label {
-  display: table-cell;
-  vertical-align: middle;
+.list-action-menu {
+  background-color: #aaa;
   color: white;
-  line-height: 1;
-  font-size: 48px;
-  font-weight: bold;
+  padding: 0 12px;
+  box-sizing: border-box;
+  line-height: 72px;
 }
 
-.cover-label {
-  text-align: center;
-  position: absolute;
-  left: 0px;
-  width: 100%;
-  bottom: 10px;
-  color: white;
+.list-action-menu:active {
+  background-color: #666;
+}
+
+.list-action-item {
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+.name {
+  margin-top: 10px;
+  line-height: 1.2;
+}
+
+.desc {
+  line-height: 1.2;
+  font-size: 14px;
+  color: #999;
 }
