@@ -1,35 +1,38 @@
 <html>
- <head>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>  
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.0.0-alpha.15/js/onsenui.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.0.0-alpha.15/js/angular-onsenui.min.js"></script>   
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.0.0-alpha.15/css/onsenui.min.css" />
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.0.0-alpha.15/css/onsen-css-components.min.css" />
-   <script>
-       var app = ons.bootstrap();
-       
-       app.controller('page1',function($scope){
-
-       });
-       
-   </script>
- </head>
- <body>
-  <ons-navigator title="Navigator" var="myNavigator">
-        <ons-button modifier="light" onclick="myNavigator.pushPage('page1.html', { animation : 'slide' } )">
-          Push Page
-        </ons-button>
-  </ons-navigator>
-  
-  
-  <ons-template id="page1.html">
-    <ons-page ng-controller="page1">
-      <ons-toolbar>
-        <div class="center">Page 1</div>
-      </ons-toolbar>
-
-    </ons-page>
-  </ons-template>
-
- </body>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.0.0-alpha.15/js/onsenui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.0.0-alpha.15/js/angular-onsenui.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.0.0-alpha.15/css/onsenui.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.0.0-alpha.15/css/onsen-css-components.min.css" />
+<script>
+  var app = ons.bootstrap();
+  app.controller('page1',function($scope){
+  });
+</script>
+</head>
+<body>
+<ons-page>
+  <ons-toolbar>
+    <div class="center">Carousel</div>
+  </ons-toolbar>
+  <ons-carousel swipeable overscrollable auto-scroll fullscreen var="carousel">
+    <ons-carousel-item style="background-color: gray;">
+      <div class="item-label">GRAY</div>
+    </ons-carousel-item>
+    <ons-carousel-item style="background-color: #085078;">
+      <div class="item-label">BLUE</div>
+    </ons-carousel-item>
+    <ons-carousel-item style="background-color: #373B44;">
+      <div class="item-label">DARK</div>
+    </ons-carousel-item>
+    <ons-carousel-item style="background-color: #D38312;">
+      <div class="item-label">ORANGE</div>
+    </ons-carousel-item>
+    <ons-carousel-cover>
+      <div class="cover-label">Swipe left or right</div>
+    </ons-carousel-cover>
+  </ons-carousel>
+</ons-page>
+</body>
 </html>
