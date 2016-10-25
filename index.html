@@ -6,8 +6,8 @@
 <script>
  var app = ons.bootstrap();
  app.controller('page1',function($scope){
-   $scope.updateStatus = function(i){
-     alert(i+' Click!');
+   $scope.updateStatus = function(i,s){
+     alert(s+i);
      $scope.carousel[i].prev({animation: 'none'});
    }
  });
@@ -44,7 +44,9 @@
             </ons-row>
           </ons-carousel-item>
           <ons-carousel-item class="list-action-menu">
-            <ons-button modifier="light" ng-click="updateStatus($index)">未対応</ons-button>
+            <ons-button modifier="light" ng-click="updateStatus($index,'未対応')">未対応</ons-button>
+            <ons-button modifier="light" ng-click="updateStatus($index,'対応中')">対応中</ons-button>
+            <ons-button modifier="light" ng-click="updateStatus($index,'対応済')">対応済</ons-button>
           </ons-carousel-item>
         </ons-carousel>
       </ons-list-item>
