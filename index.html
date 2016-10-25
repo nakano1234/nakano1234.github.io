@@ -6,7 +6,7 @@
 <script>
  var app = ons.bootstrap();
  app.controller('page1',function($scope){
-   $scope.updateStatus = function(){
+   $scope.updateStatus = function(i){
      alert($scope.carousel[i]+'Click!');
    }
  });
