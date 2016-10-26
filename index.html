@@ -5,22 +5,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.0.0-alpha.15/js/angular-onsenui.min.js"></script>
 <script>
  var app = ons.bootstrap();
- app.controller('page1',function($q,$scope){
-   ons.ready(function(i) {
-     carousel[i].on('overscroll', function(event) {
-        var deferred = $q.defer();
-        $scope.status = "Overscroll " + event.direction;
-        $scope.$apply();
-        event.waitToReturn(deferred.promise);
-        window.setTimeout(function() {
-          deferred.resolve();
-          $scope.status = "Finish";
-        }, 1500);
-      })
-   })
+ app.controller('page1',function($scope){
    $scope.updateStatus = function(i,s){
      alert(s+i);
-     $scope.carousel[i].prev({animation: 'none'});
+     $scope.carousel[i].prev();
    }
  });
 </script>
